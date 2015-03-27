@@ -11,7 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Check</title>
+        <title>Login-Validation</title>
         <%
             Class.forName("com.mysql.jdbc.Driver");
             String username=null,password=null;
