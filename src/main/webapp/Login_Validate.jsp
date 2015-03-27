@@ -13,17 +13,17 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Check</title>
         <%
-            Class.forName("oracle.jdbc.OracleDriver");
+            Class.forName("com.mysql.jdbc.Driver");
             String username=null,password=null;
             boolean found = false;
             String user = request.getParameter("username");
             String pass = request.getParameter("password");
             try{
                 
-            Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","SYSTEM","friendship96");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://127.5.254.130:3306/main","adminneUhFbw","WcAE53SruyKI");
             Statement stmt = conn.createStatement();
             String retrieve;
-            retrieve = "SELECT * FROM Notesify";
+            retrieve = "SELECT * FROM users";
             ResultSet rs = stmt.executeQuery(retrieve);
              while(rs.next()){
                  username = rs.getString("USERNAME");
@@ -52,7 +52,7 @@
                 %>
                 <script>
                     window.alert("Incorrect Username/Password.");
-                    window.location="Login_Page.html";
+                    window.location="index.html";
                 </script>
                 <%
             }    
