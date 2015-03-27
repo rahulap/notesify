@@ -37,13 +37,13 @@
 				if((isNaN(n1)) || (isNaN(n2)))
 				{
 					window.alert("Enter a valid Ref.No");
-					window.location="getNotes.html";
+					window.location="getNotes.jsp";
 				}
 		 }
 		else
 		{
 				window.alert("Enter a valid Ref.No");
-				window.location="getNotes.html";
+				window.location="getNotes.jsp";
 		}
 			<%
         int year = now.get(Calendar.YEAR);
