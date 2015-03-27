@@ -77,8 +77,9 @@
 		catch (IOException e) {
             finaltext = "The notes for Reference ID " + result + " has not been uploaded yet.";
             
-        }
-		} %>
+			}
+		}
+		%>}
 		</script>
                  </head>
     <body background="images/bgtxt_blue.jpg">
