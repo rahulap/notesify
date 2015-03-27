@@ -32,15 +32,9 @@
          var x = '<%=getp%>';
          var n1 = x.charAt(3);
          var n2 = x.charAt(4);
-         if((isNaN(n1)) || (isNaN(n2)) || (x.length<5))
+         if((!(isNaN(n1)) && !(isNaN(n2))) && (x.length==5))
          {
-               window.alert("Enter a valid Ref.No");
-             window.location="getNotes.html";
-         }
-       else
-	   {
-
-		<%
+			 <%
         int year = now.get(Calendar.YEAR);
         String htm="";
         tempurl = tempurl + year+"/";
@@ -75,6 +69,13 @@
         }
 
          %>
+		
+         }
+       else
+	   {
+			       window.alert("Enter a valid Ref.No");
+					window.location="getNotes.html";
+        
 		}
 		</script>
                  </head>
