@@ -27,6 +27,20 @@
             String tempurl="http://ibatchnotes.blogspot.com/";
             result = request.getParameter("notinp");
             getp = request.getParameter("notinp");
+			%>
+			<script>
+         var x = '<%=getp%>';
+         var n1 = x.charAt(3);
+         var n2 = x.charAt(4);
+         if((isNaN(n1)) || (isNaN(n2)) || (x.length<5))
+         {
+               window.alert("Enter a valid Ref.No");
+             window.location="getNotes.html";
+         }
+       else
+	   {
+
+		<%
         int year = now.get(Calendar.YEAR);
         String htm="";
         tempurl = tempurl + year+"/";
@@ -61,17 +75,9 @@
         }
 
          %>
-         <script>
-         var x = '<%=getp%>';
-         var n1 = x.charAt(3);
-         var n2 = x.charAt(4);
-         if((isNaN(n1)) || (isNaN(n2)) || (x.length<5))
-         {
-               window.alert("Enter a valid Ref.No");
-             window.location="getNotes.html";
-         }
-       </script>
-        </head>
+		}
+		</script>
+                 </head>
     <body background="images/bgtxt_blue.jpg">
         <center>
         <br>
