@@ -35,6 +35,8 @@
          if((!(isNaN(n1)) && !(isNaN(n2))) && (x.length==5))
          {
 			 <%
+			 if(getp.length()==5)
+			 {
         int year = now.get(Calendar.YEAR);
         String htm="";
         tempurl = tempurl + year+"/";
@@ -67,14 +69,14 @@
             finaltext = "The notes for Reference ID " + result + " has not been uploaded yet.";
             
         }
-
+		}
+		else
+		{
          %>
 		
-         }
-       else
-	   {
-			       window.alert("Enter a valid Ref.No");
+			      window.alert("Enter a valid Ref.No");
 					window.location="getNotes.html";
+		<% }%>
         
 		}
 		</script>
