@@ -65,20 +65,20 @@
                 }
                
             }
-        } catch (IOException e) {
-            finaltext = "The notes for Reference ID " + result + " has not been uploaded yet.";
-            
         }
-		}
 		else
 		{
          %>
 		
 			      window.alert("Enter a valid Ref.No");
 					window.location="getNotes.html";
-		<% }%>
+		<% }
         
-		}
+		catch (IOException e) {
+            finaltext = "The notes for Reference ID " + result + " has not been uploaded yet.";
+            
+        }
+		} %>
 		</script>
                  </head>
     <body background="images/bgtxt_blue.jpg">
