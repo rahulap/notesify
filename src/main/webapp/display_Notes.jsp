@@ -30,16 +30,21 @@
 			%>
 			<script>
          var x = '<%=getp%>';
-         var n1 = x.charAt(3);
-         var n2 = x.charAt(4);
-		 function inval()
+		 if(x.length==5)
 		 {
-			if((isNaN(n1)) || (isNaN(n2)) || (x.length<5))
-			{
+			var n1 = x.charAt(3);
+			var n2 = x.charAt(4);
+				if((isNaN(n1)) || (isNaN(n2)))
+				{
+					window.alert("Enter a valid Ref.No");
+					window.location="getNotes.html";
+				}
+		 }
+		else
+		{
 				window.alert("Enter a valid Ref.No");
 				window.location="getNotes.html";
-			}
-		 }
+		}
 			<%
         int year = now.get(Calendar.YEAR);
         String htm="";
@@ -72,12 +77,6 @@
                
             }
         }
-		else
-		{
-			%>
-				inval();
-			<%
-		}
 		}
 		catch (IOException e) {
             finaltext = "The notes for Reference ID " + result + " has not been uploaded yet.";
