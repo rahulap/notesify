@@ -13,6 +13,7 @@ and open the template in the editor.
     -webkit-border-radius: 5px;
     border-radius:6px;
     color:red;
+    font-weight: bold;
     font-family: 'Sans Serif';
     font-size: 20px;
     text-decoration: none;
@@ -33,6 +34,40 @@ and open the template in the editor.
     cursor: pointer;
     border:none;
 }
+#notinp {
+    width:250px;
+  height:30px;
+    background-color: #ffffff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    color:#000000;
+    font-family: 'Sans Serif';
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    background: white;
+    cursor: text;
+    border:none;
+}
+#notinp:hover {
+    width:250px;
+  height:30px;
+    background-color: #ffffff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    color:#000000;
+    font-family: 'Sans Serif';
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    background: white;
+    cursor: text;
+    border: 2px #ff0000;
+    border:none;
+}
+
 #notesify_main:hover{
     width:250px;
   height:30px;
@@ -69,3 +104,16 @@ padding: 2px;
 text-align: justify;
 background: transparent;
 }
+#boxnote {
+width: 700px;
+height: 450px;
+overflow-y:scroll; 
+font-size: 18pt;
+color:#000000;
+margin: 0 auto;
+border: 2px solid #ff0000;
+padding: 2px;
+text-align: left;
+background: #ffffff;
+}
+
