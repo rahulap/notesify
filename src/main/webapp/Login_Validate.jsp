@@ -20,7 +20,7 @@
             String pass = request.getParameter("password");
             try{
                 
-            Connection conn = DriverManager.getConnection("jdbc:mysql://127.5.254.130:3306/main","adminneUhFbw","WcAE53SruyKI");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://127.5.254.130:3306/main","adminneUhFbw","friendship96");
             Statement stmt = conn.createStatement();
             String retrieve;
             retrieve = "SELECT * FROM users";
@@ -46,7 +46,7 @@
                 out.print(e);
             }
             if(found)
-                response.sendRedirect("Notesify.html");
+                response.sendRedirect("main.jsp");
             else
             {           
                 %>
