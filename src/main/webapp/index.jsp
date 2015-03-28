@@ -14,11 +14,19 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script>
 		<%
+		try
+		{
 		String logfound=(String)session.getAttribute("log-found");
-			if(logfound.equals("true"))
+		if(logfound.equals("true"))
 			{%>
 				window.location="main.jsp";
-			<%}%>
+			<%}
+		}
+		catch(Exception e)
+		{
+			session.setAttribute("log-found","false");
+		}
+			%>
 		</script>
     </head>
     <body background="images/bgtxt_blue.jpg">
