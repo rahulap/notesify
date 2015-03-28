@@ -19,7 +19,6 @@
             String user = request.getParameter("username");
             String pass = request.getParameter("password");
             try{
-                session.setAttribute("log-found","false");
             Connection conn = DriverManager.getConnection("jdbc:mysql://127.5.254.130:3306/main","adminneUhFbw","friendship96");
             Statement stmt = conn.createStatement();
             String retrieve;

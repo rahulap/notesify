@@ -4,12 +4,22 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+<%@page import="java.util.*" session="true"%>
+
 <html>
     <head>
         <title>Notesify-Login Page</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="custom.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script>
+		<%                session.setAttribute("log-found","false"); 
+		String logfound=(String)session.getAttribute("log-found");
+			if(logfound.equals("true"))
+			{%>
+				window.location="main.jsp";
+			<%}%>
+		</script>
     </head>
     <body background="images/bgtxt_blue.jpg">
         <center>
