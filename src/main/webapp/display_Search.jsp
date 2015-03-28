@@ -5,6 +5,7 @@
 <%@page import="java.net.URL"%>
 <%@page import="java.util.Calendar"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.util.*" session="true"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,6 +13,13 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="custom.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script>
+		<% String logfound=(String)session.getAttribute("log-found");
+			if(logfound.equals(null) || logfound.equals("false"))
+			{%>
+				window.location="index.html";
+			<%}%>
+		</script>
         <%
                     String finaltext = "",result="",getp="",f="";
         try {

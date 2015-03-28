@@ -3,7 +3,7 @@
     Created on : 20 Mar, 2015, 7:26:36 PM
     Author     : Rahulap
 --%>
-
+<%@page import="java.util.*" session="true"%>
 <%@page import="java.io.IOException"%>
 <%@page import="java.io.InputStreamReader"%>
 <%@page import="java.io.BufferedReader"%>
@@ -18,6 +18,13 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="custom.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script>
+		<% String logfound=(String)session.getAttribute("log-found");
+			if(logfound.equals(null) || logfound.equals("false"))
+			{%>
+				window.location="index.html";
+			<%}%>
+		</script>
         <%
                     String finaltext = "",result="",getp="";
                     boolean red = false;

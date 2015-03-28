@@ -3,7 +3,7 @@
     Created on : 19 Mar, 2015, 10:13:54 PM
     Author     : Rahulap
 --%>
-
+<%@page import="java.util.*" session="true"%>
 <%@page import="java.io.PrintWriter"%>
 <%@page import="java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -19,7 +19,7 @@
             String user = request.getParameter("username");
             String pass = request.getParameter("password");
             try{
-                
+                session.setAttribute("log-found","false");
             Connection conn = DriverManager.getConnection("jdbc:mysql://127.5.254.130:3306/main","adminneUhFbw","friendship96");
             Statement stmt = conn.createStatement();
             String retrieve;
@@ -46,7 +46,10 @@
                 out.print(e);
             }
             if(found)
+			{
+				session.setAttribute("log-found","true");
                 response.sendRedirect("main.jsp");
+			}
             else
             {           
                 %>
