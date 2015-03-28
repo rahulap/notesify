@@ -54,7 +54,7 @@
                 %>
                 <script>
                     window.alert("Incorrect Username/Password.");
-                    window.location="index.html";
+                    window.location="index.jsp";
                 </script>
                 <%
             }    

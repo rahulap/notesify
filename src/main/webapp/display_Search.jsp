@@ -17,7 +17,7 @@
 		<% String logfound=(String)session.getAttribute("log-found");
 			if(logfound.equals(null) || logfound.equals("false"))
 			{%>
-				window.location="index.html";
+				window.location="index.jsp";
 			<%}%>
 		</script>
         <%

@@ -23,7 +23,7 @@
         <h4>Logged in? <%=s%></h4><br>
         <%session.setAttribute("log-found","false");%>
 	<script>
-		window.location="index.html"
+		window.location="index.jsp"
 	</script>      
     </body>
 </html>
