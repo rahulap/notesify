@@ -13,7 +13,7 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="custom.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script>
-		<%                session.setAttribute("log-found","false"); 
+		<%
 		String logfound=(String)session.getAttribute("log-found");
 			if(logfound.equals("true"))
 			{%>
