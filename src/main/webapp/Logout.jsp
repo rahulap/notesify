@@ -21,7 +21,7 @@
         <h4>Your Password is<%=session.getAttribute("password")%></h4><br>
         <%String s=(String)session.getAttribute("log-found"); %>
         <h4>Logged in? <%=s%></h4><br>
-        <%session.invalidate();%>
+        <%session.setAttribute("log-found","false");%>
 	<script>
 		window.location="index.html"
 	</script>      
