@@ -49,9 +49,9 @@
 					session.setAttribute("log-found","true");
 					response.sendRedirect("main.jsp");
 
-					}
-				}
 			}
+				
+			
             else
             {           
                 %>
