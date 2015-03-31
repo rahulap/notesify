@@ -23,7 +23,7 @@
             Statement stmt = conn.createStatement();
             String retrieve;
             retrieve = "SELECT * FROM users";
-			String g = "Select * from UserDetails where username =\'";
+			String g = "Select * from UserDetails";
             ResultSet rs = stmt.executeQuery(retrieve);
              while(rs.next()){
                  username = rs.getString("USERNAME");
@@ -31,7 +31,6 @@
                  
                 if(user.equals(username) && password.equals(pass))
                  {
-						g = g + username + "\'";
                         found = true;
                         break;
                  }
@@ -47,11 +46,20 @@
             }
             if(found)
 			{
+				boolean locflag = false;
+				String temp=null;
 				ResultSet rs1 = stmt.executeQuery(g);
-				String temp = rs1.getString("FirstName");
-				session.setAttribute("FirstName",temp);
-				session.setAttribute("log-found","true");
-                response.sendRedirect("main.jsp");
+				while(rs1.next())
+				{
+					if((String)rs1.getString("Username").equals(username))
+					{
+						temp = (String rs1.getString("FirstName"));
+						session.setAttribute("FirstName",temp);
+					session.setAttribute("log-found","true");
+					response.sendRedirect("main.jsp");
+
+					}
+				}
 			}
             else
             {           
