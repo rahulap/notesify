@@ -42,11 +42,9 @@
 		</script>
     </head>
     <body background="images/bgtxt_blue.jpg">
-	<div id="topbut">
-	<div id="top1" align="left">
+	<div id="toptext" style="float-left;width:400px">
 	<input  type="submit" value="Back" id="submit" onClick="back()"/></div>
-	<div id="top2" align="right">Welcome, <%=session.getAttribute("FirstName")%>  <input  type="submit" value="Logout" id="submit" onClick="Logout()"/></div>
-	</div>
+	<div id="toptext" style="float-right;width:400px">Welcome, <%=session.getAttribute("FirstName")%>  <input  type="submit" value="Logout" id="submit" onClick="Logout()"/></div>
         <center>
         <br>
         <br>
