@@ -38,18 +38,24 @@
              stmt.close();
              conn.close();
             }
-           
+           boolean flag=false;
             catch(Exception e)
             {
+				flag = true;
                 %>
 				window.alert("Sorry. Username already taken. Try again with a different Username.");
 				window.location="New_User.jsp";
 				<%
             }
+			if(flag==false)
+			{
             
     %>
             window.alert("Sign Up Successful");
             window.location="index.jsp";
+			<%
+			}
+			%>
             </script>
             </head>
             <body>
