@@ -42,9 +42,8 @@
 		</script>
     </head>
     <body background="images/bgtxt_blue.jpg">
-	<input  type="submit" value="Back" id="submit" onClick="back()"/>
 	<div class="toptext" align="right">Welcome, <%=session.getAttribute("FirstName")%>  <input  type="submit" value="Logout" id="submit" onClick="Logout()"/></div>
-        <center>
+        <input  type="submit" value="Back" id="submit" onClick="back()"/><center>
         <br>
         <br>
         <img src ="images/title_new.png"><br><br><br><br><br>
