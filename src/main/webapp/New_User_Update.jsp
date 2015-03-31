@@ -15,6 +15,7 @@
         <title>Updating</title>
         <script>
         <%
+			           boolean flag=false;
             Class.forName("com.mysql.jdbc.Driver");
             String username=null,password=null;
             boolean found = false;
@@ -38,7 +39,6 @@
              stmt.close();
              conn.close();
             }
-           boolean flag=false;
             catch(Exception e)
             {
 				flag = true;
