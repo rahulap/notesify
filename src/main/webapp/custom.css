@@ -81,7 +81,7 @@ and open the template in the editor.
     color:red;
     font-family: 'Sans Serif';
     font-size: 20px;
-    
+    display:inline;
 }
 
 #submit:hover {
@@ -116,4 +116,3 @@ padding: 2px;
 text-align: left;
 background: #ffffff;
 }
-
