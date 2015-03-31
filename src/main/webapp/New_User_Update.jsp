@@ -47,7 +47,7 @@
 				window.location="New_User.jsp";
 				<%
             }
-			if(flag==false)
+			if(!flag)
 			{
             
     %>
