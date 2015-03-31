@@ -46,15 +46,6 @@
             }
             if(found)
 			{
-				boolean locflag = false;
-				String temp=null;
-				ResultSet rs1 = stmt.executeQuery(g);
-				while(rs1.next())
-				{
-					if((String)rs1.getString("Username").equals(username))
-					{
-						temp = (String rs1.getString("FirstName"));
-						session.setAttribute("FirstName",temp);
 					session.setAttribute("log-found","true");
 					response.sendRedirect("main.jsp");
 
