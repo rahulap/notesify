@@ -110,9 +110,10 @@
 		 </script>
 		 </head>
     <body background="images/bgtxt_blue.jpg">
-	<input  type="submit" value="Back" id="submit" onClick="back()"/>
-	<div id="toptext" align="right">Welcome, <%=session.getAttribute("FirstName")%>  <input  type="submit" value="Logout" id="submit" onClick="Logout()"/></div>
-        <center>
+	<div>
+	<div id="toptext" style="float:left;"> <input  type="submit" value="Back" id="submit" onClick="back()"/></div>
+     <div id="toptext"style="float:right; display:inline-block;">Welcome, <%=session.getAttribute("FirstName")%>  <input  type="submit" value="Logout" id="submit" onClick="Logout()"/></div>
+	</div>    <center>
         <br>
         <br>
         <img src ="images/title_new.png"><br><br><br>
