@@ -15,7 +15,7 @@
         <title>Check</title>
         <script>
         <%
-            Class.forName("oracle.jdbc.OracleDriver");
+            Class.forName("com.mysql.jdbc.Driver");
             String username=null,password=null;
             boolean found = false;
             session.setAttribute("log-found","false");
@@ -28,7 +28,7 @@
             String mobile = request.getParameter("number");
             try{
                 
-            Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","SYSTEM","friendship96");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://127.5.254.130:3306/main","adminneUhFbw","friendship96");
             Statement stmt = conn.createStatement();
             String retrieve,notesify;
             retrieve = "insert into UserDetails values(\'"+first +"\',\'"+last +"\',\'"+rollno +"\',\'"+sem +"\',\'"+user +"\',\'"+pass +"\',\'"+mobile +"\')";
