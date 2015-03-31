@@ -15,9 +15,9 @@
         <title>Updating</title>
         <script>
         <%
-			           boolean flag=false;
             Class.forName("com.mysql.jdbc.Driver");
             String username=null,password=null;
+			   boolean flag=false;
             boolean found = false;
             session.setAttribute("log-found","false");
             String last = request.getParameter("lname");
