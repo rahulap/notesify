@@ -14,7 +14,7 @@ and open the template in the editor.
 		<script>
 		function Logout()
 		{
-			window.location="index.jsp";
+			window.location="Logout.jsp";
 		}
 		<% String logfound=null;
 			try
