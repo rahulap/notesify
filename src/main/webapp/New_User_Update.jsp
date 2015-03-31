@@ -12,7 +12,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Check</title>
+        <title>Updating</title>
         <script>
         <%
             Class.forName("com.mysql.jdbc.Driver");
@@ -23,8 +23,8 @@
             String first = request.getParameter("fname");
             String rollno = request.getParameter("roll");
             String sem = request.getParameter("sem");
-            String user = request.getParameter("username");
-            String pass = request.getParameter("password");
+            String user = request.getParameter("usernamesu");
+            String pass = request.getParameter("passwordsu");
             String mobile = request.getParameter("number");
             try{
                 

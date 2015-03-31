@@ -12,6 +12,10 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="custom.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script>
+		function Logout()
+		{
+			window.location="index.jsp";
+		}
 		<% String logfound=(String)session.getAttribute("log-found");
 			if(logfound.equals(null) || logfound.equals("false"))
 			{%>
@@ -32,6 +36,7 @@ and open the template in the editor.
         </script>
     </head>
     <body background="images/bgtxt_blue.jpg">
+	<div id="toptext" align="right">Welcome, <%=session.getAttribute("FirstName");%>  <input  type="submit" value="Logout" id="submit" onClick="Logout()"/></div>
         <center>
         <br>
         <br>

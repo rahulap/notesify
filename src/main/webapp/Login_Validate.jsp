@@ -23,6 +23,7 @@
             Statement stmt = conn.createStatement();
             String retrieve;
             retrieve = "SELECT * FROM users";
+			String g = "Select * from UserDetails where username =\'";
             ResultSet rs = stmt.executeQuery(retrieve);
              while(rs.next()){
                  username = rs.getString("USERNAME");
@@ -30,7 +31,7 @@
                  
                 if(user.equals(username) && password.equals(pass))
                  {
-                      
+						g = g + username + "\'";
                         found = true;
                         break;
                  }
@@ -46,6 +47,9 @@
             }
             if(found)
 			{
+				ResultSet rs1 = stmt.executeQuery(g);
+				String temp = rs1.getString("FirstName");
+				session.setAttribute("FirstName",temp);
 				session.setAttribute("log-found","true");
                 response.sendRedirect("main.jsp");
 			}

@@ -7,7 +7,7 @@
 <html>
     <head>
   
-        <title>Notesify-Login Page</title>
+        <title>Notesify</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="custom.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +19,7 @@
         <br>
         <br>
         <img src ="images/title_new.png"><br>
-       
+       <div id="toptext"> Welcome to Notesify, New User</div><br>
         <form name="myForm" action="New_User_Update.jsp"  method="post">
            
             <table border="5" bordercolor="#ff0000" align="center" cellspacing="1" width="300" style="color:red">
@@ -37,10 +37,10 @@
                 <tr>
                     <td align="center">Semester:</td><td align="center"><input type="text" name="sem" required="" maxlength=1 /></td>
                 </tr>
-                    <td align="center">Username:</td><td align="center"><input type="text" name="username" required="" minlength=5 /></td>
+                    <td align="center">Username:</td><td align="center"><input type="text" name="usernamesu" required="" minlength=5 /></td>
                 </tr>
                 <tr>
-                    <td align="center">Password:</td><td align="center"><input type="password" name="password" required="" minlength=8 maxlength=14 /></td>
+                    <td align="center">Password:</td><td align="center"><input type="password" name="passwordsu" required="" minlength=8 maxlength=14 /></td>
                  </tr>
                  <tr>
                     <td align="center">Mobile No:</td><td align="center"><input type="text" name="number" required="" minlength=10 maxlength=10 /></td>
