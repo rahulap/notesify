@@ -13,6 +13,10 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="custom.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script>
+		function Signup()
+		{
+			window.location="New_User.jsp"
+		}
 		<%
 		try
 		{
@@ -30,6 +34,7 @@ and open the template in the editor.
 		</script>
     </head>
     <body background="images/bgtxt_blue.jpg">
+	 <div id="toptext" align="right">New to Notesify?  <input  type="submit" value="Sign up" id="submit" onClick="Signup()"/></div>
         <center>
         <br>
         <br>
@@ -41,10 +46,10 @@ and open the template in the editor.
             <table border="1" align="center" width="300" style="color:red">
                  <b>
                 <tr>
-                    <td align="center">Username:</td><td align="center"><input type="text" name="username"/></td>
+                    <td align="center">Username:</td><td align="center"><input type="text" required="" name="username"/></td>
                 </tr>
                 <tr>
-                    <td align="center">Password:</td><td align="center"><input type="password" name="password"/></td>
+                    <td align="center">Password:</td><td align="center"><input type="password" required="" name="password"/></td>
                  </tr>
               </table><br>
               <input  type="submit" value="Sign in" id="submit"/><br></b>

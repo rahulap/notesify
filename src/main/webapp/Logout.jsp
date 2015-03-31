@@ -11,19 +11,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-        
-    </head>
-    <body>
-        <h4>Your IP address is <%= request.getRemoteAddr()%></h4><br>
-        <h4>Your Gateway is <%= request.getHeader("VIA")%></h4><br>
-        <h4>Your IP is<%=request.getHeader("X-FORWARDED-FOR")%></h4><br>
-        <h4>Your Username is<%=session.getAttribute("username")%></h4><br>
-        <h4>Your Password is<%=session.getAttribute("password")%></h4><br>
-        <%String s=(String)session.getAttribute("log-found"); %>
-        <h4>Logged in? <%=s%></h4><br>
         <%session.setAttribute("log-found","false");%>
-	<script>
+		<script>
 		window.location="index.jsp"
-	</script>      
-    </body>
+		</script>   
+    </head>       
 </html>
