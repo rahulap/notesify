@@ -52,8 +52,9 @@
         </center>
             <%
          String f="";
-         URL url;
+        
         boolean comp = false;
+		 URL url;
             try {
                 
                 //create url object to point to the file location on internet
