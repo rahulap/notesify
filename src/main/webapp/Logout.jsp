@@ -11,8 +11,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Logging out</title>
-        <%session.setAttribute("log-found","false");%>
 		<script>
+		<%session.setAttribute("log-found","false");%>
 		window.location="index.jsp"
 		</script>   
     </head>       
