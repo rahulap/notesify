@@ -50,15 +50,16 @@
 				try{
 				Connection conn = DriverManager.getConnection("jdbc:mysql://127.5.254.130:3306/main","adminneUhFbw","friendship96");
 				Statement stmt = conn.createStatement();
-				ResultSet rs1 = stmt.executeQuery("Select * from UserDetails where username=\'" + user + "\'");
+				ResultSet rs1 = stmt.executeQuery("Select * from UserDetails where Username=\'" + user + "\'");
+				rs1.next();
 				temp = (String) rs1.getString("FirstName");
+				session.setAttribute("FirstName",temp);
+				session.setAttribute("log-found","true");
+				response.sendRedirect("main.jsp");
 				}
 				catch(Exception e)
 				{
 				}
-					session.setAttribute("FirstName",temp);
-					session.setAttribute("log-found","true");
-					response.sendRedirect("main.jsp");
 
 			}
 				
