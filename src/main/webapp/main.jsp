@@ -16,7 +16,15 @@ and open the template in the editor.
 		{
 			window.location="index.jsp";
 		}
-		<% String logfound=(String)session.getAttribute("log-found");
+		<% String logfound=null;
+			try
+			{
+			logfound=(String)session.getAttribute("log-found");
+			}
+			catch(Exception e)
+			{
+					session.setAttribute("log-found","false");
+			}
 			if(logfound.equals(null) || logfound.equals("false"))
 			{%>
 				window.location="index.jsp";

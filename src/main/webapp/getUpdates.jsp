@@ -18,7 +18,15 @@
         <link rel="stylesheet" type="text/css" href="custom.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script>
-		<% String logfound=(String)session.getAttribute("log-found");
+		<% String logfound=null;
+			try
+			{
+			logfound=(String)session.getAttribute("log-found");
+			}
+			catch(Exception e)
+			{
+					session.setAttribute("log-found","false");
+			}
 			if(logfound.equals(null) || logfound.equals("false"))
 			{%>
 				window.location="index.jsp";
