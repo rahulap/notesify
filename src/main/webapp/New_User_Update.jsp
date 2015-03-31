@@ -41,7 +41,10 @@
            
             catch(Exception e)
             {
-                out.print(e);
+                %>
+				window.alert("Sorry. Username already taken. Try again with a different Username.");
+				window.location="New_User.jsp";
+				<%
             }
             
     %>
@@ -50,6 +53,6 @@
             </script>
             </head>
             <body>
-                <input  type="submit" value="Sign up" id="submit" onClick="logout()"/></div>
+                
     </body>
 </html>

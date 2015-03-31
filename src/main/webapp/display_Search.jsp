@@ -82,7 +82,7 @@
         <center>
         <br>
         <br>
-        <img src ="images/title_new.png"><br><br><br><br>
+        <img src ="images/title_new.png"><br><br><br>
         </center>
          <div id="boxnote"><%=f%></div>
      </body>
