@@ -46,6 +46,17 @@
             }
             if(found)
 			{
+				String temp = null;
+				try{
+				Connection conn = DriverManager.getConnection("jdbc:mysql://127.5.254.130:3306/main","adminneUhFbw","friendship96");
+				Statement stmt = conn.createStatement();
+				ResultSet rs1 = stmt.executeQuery("Select * from UserDetails where username=\'" + user + "\'");
+				temp = (String) rs1.getString("FirstName");
+				}
+				catch(Exception e)
+				{
+				}
+					session.setAttribute("FirstName",temp);
 					session.setAttribute("log-found","true");
 					response.sendRedirect("main.jsp");
 
