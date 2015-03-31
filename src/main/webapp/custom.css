@@ -87,6 +87,14 @@ and open the template in the editor.
     font-family: 'Sans Serif';
     font-size: 20px;
 }
+#top1
+{
+	align:left;
+}
+#top2
+{
+	align:right;
+}
 #top1 , #top2
 {
 	display:inline;
