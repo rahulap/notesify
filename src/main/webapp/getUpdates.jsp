@@ -43,7 +43,7 @@
     </head>
     <body background="images/bgtxt_blue.jpg">
 	<input  type="submit" value="Back" id="submit" onClick="back()"/>
-	<div class="toptext" style="float-right;width:400px">Welcome, <%=session.getAttribute("FirstName")%>  <input  type="submit" value="Logout" id="submit" onClick="Logout()"/></div>
+	<div class="toptext" align="right">Welcome, <%=session.getAttribute("FirstName")%>  <input  type="submit" value="Logout" id="submit" onClick="Logout()"/></div>
         <center>
         <br>
         <br>
