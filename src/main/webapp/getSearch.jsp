@@ -17,6 +17,10 @@ and open the template in the editor.
 		{
 			window.location="Logout.jsp";
 		}
+		function back()
+		{
+			window.location="main.jsp";
+		}
 		<% String logfound=null;
 			try
 			{
@@ -33,6 +37,7 @@ and open the template in the editor.
 		</script>
      </head>
     <body background="images/bgtxt_blue.jpg">
+	<input  type="submit" value="Back" id="submit" onClick="back()"/>
 	<div id="toptext" align="right">Welcome, <%=session.getAttribute("FirstName")%>  <input  type="submit" value="Logout" id="submit" onClick="Logout()"/></div>
         <center>
         <br>

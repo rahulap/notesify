@@ -18,6 +18,10 @@
 		{
 			window.location="Logout.jsp";
 		}
+		function back()
+		{
+			window.location="getSearch.jsp";
+		}
 		<% String logfound=null;
 			try
 			{
@@ -78,6 +82,7 @@
          %>
         </head>
     <body background="images/bgtxt_blue.jpg">
+	<input  type="submit" value="Back" id="submit" onClick="back()"/>
 	<div id="toptext" align="right">Welcome, <%=session.getAttribute("FirstName")%>  <input  type="submit" value="Logout" id="submit" onClick="Logout()"/></div>
         <center>
         <br>
