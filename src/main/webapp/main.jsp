@@ -24,6 +24,7 @@ and open the template in the editor.
 			catch(Exception e)
 			{
 					session.setAttribute("log-found","false");
+					logfound="false";
 			}
 			if(logfound.equals(null) || logfound.equals("false"))
 			{%>
