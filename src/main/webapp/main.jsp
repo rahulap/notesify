@@ -20,6 +20,12 @@ and open the template in the editor.
 			try
 			{
 			logfound=(String)session.getAttribute("log-found");
+                 if(logfound==null)
+                 {
+                     session.setAttribute("log-found","false");
+                     logfound="false";
+                 }
+                 
 			}
 			catch(Exception e)
 			{
