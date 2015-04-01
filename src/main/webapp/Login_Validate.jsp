@@ -53,6 +53,7 @@
 				ResultSet rs1 = stmt.executeQuery("Select * from UserDetails where Username=\'" + user + "\'");
 				rs1.next();
 				temp = (String) rs1.getString("FirstName");
+				session.setAttribute("username",username);
 				session.setAttribute("FirstName",temp);
 				session.setAttribute("log-found","true");
 				Date now = new Date();
