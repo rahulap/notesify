@@ -58,7 +58,7 @@
 				session.setAttribute("username",username);
 				session.setAttribute("FirstName",temp);
 				session.setAttribute("log-found","true");
-				Date now = new Date();
+				java.util.Date now = new java.util.Date();
 				stmt.executeUpdate("insert into LoginDetails values(\'" + temp +"\',\'" + username +"\',\'"+ request.getRemoteAddr() +"\',\'"+ now.toString() +"\',\'NA\',\'IN\')" );
 				response.sendRedirect("main.jsp");
 				}
