@@ -16,7 +16,7 @@ and open the template in the editor.
 		{
 			window.location="Logout.jsp";
 		}
-		<% String logfound=null;
+		<% String logfound="false";
 			try
 			{
 			logfound=(String)session.getAttribute("log-found");
@@ -24,9 +24,8 @@ and open the template in the editor.
 			catch(Exception e)
 			{
 					session.setAttribute("log-found","false");
-					logfound="false";
 			}
-			if(logfound.equals(null) || logfound.equals("false"))
+			if(logfound.equals("false"))
 			{%>
 				window.location="index.jsp";
 			<%}%>        
