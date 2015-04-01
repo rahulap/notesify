@@ -31,7 +31,7 @@ and open the template in the editor.
 			session.setAttribute("log-found","false");
 		}
 			%>
-			
+		<%=session.getAttribute("log-found")%>	
 		</script>
     </head>
     <body background="images/bgtxt_blue.jpg">
