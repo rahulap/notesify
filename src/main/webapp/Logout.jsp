@@ -17,7 +17,7 @@
 		Connection conn = DriverManager.getConnection("jdbc:mysql://127.5.254.130:3306/main","adminneUhFbw","friendship96");
 		Statement stmt = conn.createStatement();
 		String user =(String)session.getAttribute("username");
-		stmt.executeUpdate("Update LoginDetails SET Logout_Time=\'" + now.toString() +"\', Status=\'OUT\' where username=\'"+username+"\' AND Status=\'IN\'");
+		stmt.executeUpdate("Update LoginDetails SET Logout_Time=\'" + now.toString() +"\', Status=\'OUT\' where username=\'"+user+"\' AND Status=\'IN\'");
 		session.invalidate();%>
 		<script>
 			window.location="index.jsp";
