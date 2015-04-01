@@ -15,7 +15,8 @@
         <title>Login-Validation</title>
         <%
             Class.forName("com.mysql.jdbc.Driver");
-            String username=null,password=null;
+            String username=null;
+			String password=null;
             boolean found = false;
             String user = request.getParameter("username");
             String pass = request.getParameter("password");
