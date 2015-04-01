@@ -31,10 +31,10 @@ and open the template in the editor.
 			session.setAttribute("log-found","false");
 		}
 			%>
-		<%=session.getAttribute("log-found")%>	
 		</script>
     </head>
     <body background="images/bgtxt_blue.jpg">
+	<%=session.getAttribute("log-found")%>	
 	 <div id="toptext" align="right">New to Notesify?  <input  type="submit" value="Sign up" id="submit" onClick="Signup()"/></div>
         <center>
         <br>
