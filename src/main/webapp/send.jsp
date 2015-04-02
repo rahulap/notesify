@@ -56,7 +56,7 @@
             Statement stmt = conn.createStatement();
             String retrieve,notesify;
 			java.util.Date now = new java.util.Date();
-            retrieve = "insert into MessageDetails values(\'"+from_user +"\',\'"+to_user +"\',\'"+subject +"\',\'"+message +"\',\'"+now.toString(); +"\',\'"+"NA" +"\',\'"+"WAIT"+"\')";
+            retrieve = "insert into MessageDetails values(\'"+from_user +"\',\'"+to_user +"\',\'"+subject +"\',\'"+message +"\',\'"+now.toString(); +"\',\'NA\',\'WAIT\')";
             stmt.executeUpdate(retrieve);
              stmt.close();
              conn.close();
