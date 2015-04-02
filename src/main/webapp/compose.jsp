@@ -26,7 +26,7 @@
 			{
 					session.setAttribute("log-found","false");
 			}
-			if(logfound.equals(null) || logfound.equals("false"))
+			if(logfound.equals("false"))
 			{%>
 				window.location="index.jsp";
 			<%}%>

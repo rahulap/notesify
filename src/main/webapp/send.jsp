@@ -12,7 +12,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Updating</title>
+        <title>Sending...</title>
         <script>
 		<% String logfound=null;
 			try
@@ -28,7 +28,7 @@
 			{
 					session.setAttribute("log-found","false");
 			}
-			if(logfound.equals(null) || logfound.equals("false"))
+			if(logfound.equals("false"))
 			{%>
 				window.location="index.jsp";
 			<%}%>
