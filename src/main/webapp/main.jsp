@@ -84,7 +84,7 @@ and open the template in the editor.
 		if(i==0)
 		{
 	%>
-	<div id="toptext" style="float:left;display:inline-block"> <button  id="submit" style="background:grey; cursor:null;"disabled>Inbox</button></div>
+	<div id="toptext" style="float:left;display:inline-block"> <button  id="submit" style="background:grey; cursor:default; color:red;"disabled>Inbox</button></div>
 	<%	
 		}
 		else
