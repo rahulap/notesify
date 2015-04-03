@@ -60,6 +60,7 @@
         <img src ="images/title_new.png"><br><br><br>
         </center>
 		<%
+				 Class.forName("com.mysql.jdbc.Driver");
 				String finaltext="";
 				try{
 				Connection conn = DriverManager.getConnection("jdbc:mysql://127.5.254.130:3306/main","adminneUhFbw","friendship96");
