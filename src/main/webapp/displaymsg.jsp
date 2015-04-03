@@ -62,7 +62,6 @@
         </center>
 		<%
 				 Class.forName("com.mysql.jdbc.Driver");
-				 int i=0;
 				String finaltext="";
 				try{
 				Connection conn = DriverManager.getConnection("jdbc:mysql://127.5.254.130:3306/main","adminneUhFbw","friendship96");
@@ -78,8 +77,6 @@
 					 <div id="msgnote"><%=finaltext%></div><br>
 				<% 
 				}
-				if(i==0)
-					response.sendRedirect("main.jsp");
 				java.util.Date now = new java.util.Date();
 				int i = stmt.executeUpdate("Update MessageDetails SET Received_Time=\'"+ now.toString() +"\',Status=\'READ\' where To_User=\'" +(String)session.getAttribute("username")+"\' and Status=\'WAIT\'");
 		
