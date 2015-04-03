@@ -84,13 +84,13 @@ and open the template in the editor.
 		if(i==0)
 		{
 	%>
-	<div id="toptext" style="float:left;display:inline-block"> <button  id="submit"  onClick="displaymsg()" disabled>Inbox</button></div>
+	<div id="toptext" style="float:left;display:inline-block"> <button  id="submit" style="background:grey; cursor:null;"disabled>Inbox</button></div>
 	<%	
 		}
 		else
 		{
 			%>
-			<div id="toptext" style="float:left;display:inline-block;"> <button id="submit" onClick="displaymsg()">Inbox: <div id="inbox"  style="float:right;display:inline-block;" ><%=i%></div></button></div>
+			<div id="toptext" style="float:left;display:inline-block;"> <button id="submit" onClick="displaymsg()">Inbox <div id="inbox"  style="float:right;display:inline-block;" ><%=i%></div></button></div>
 			<%
 		}
 	%>
