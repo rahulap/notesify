@@ -78,8 +78,9 @@
             window.location="main.jsp";
 			<%
 			}
-			%>
 			}
+			%>
+			
             </script>
             </head>
             <body>
