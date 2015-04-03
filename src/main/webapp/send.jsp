@@ -39,7 +39,6 @@
             String username=null,password=null;
 			   boolean flag=false;
             boolean found = false;
-            session.setAttribute("log-found","false");
 			String from_user = (String)session.getAttribute("username");
             String to_user = request.getParameter("to");
             String subject = request.getParameter("sub");
@@ -76,9 +75,8 @@
 			}
 			if(!flag)
 			{
-            
-    %>
-            window.alert("Message Sent.");
+			%>
+			window.alert("Message Sent.");
             window.location="main.jsp";
 			<%
 			}
