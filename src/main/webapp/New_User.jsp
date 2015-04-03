@@ -12,9 +12,14 @@
         <link rel="stylesheet" type="text/css" href="custom.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
+		function back()
+		{
+			window.location="index.jsp";
+		}
         </script>
     </head>
     <body background="images/bgtxt_blue.jpg">
+	<div id="toptext" style="float:left;"> <input  type="submit" value="Back" id="submit" onClick="back()"/></div>
         <center>
         <br>
         <br>
