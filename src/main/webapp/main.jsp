@@ -80,7 +80,7 @@ and open the template in the editor.
     <body background="images/bgtxt_blue.jpg">
 	<div>
 	<div id="toptext"style="float:left;"><button id="submit" onClick="compose()">Compose</button>&nbsp;&nbsp;</div>
-	<div id="toptext" style="float:left;display:inline-block"> <button id="submit" onClick="displaymsg()">Inbox <div id="inbox" style="float:left;display:inline-block"><%=i%></div></button></div>
+	<div id="toptext" style="float:left;display:inline-block"> <button id="submit" onClick="displaymsg()">Inbox <div id="inbox" ><%=i%></div></button></div>
      <div id="toptext"style="float:right; display:inline-block;">Welcome, <%=session.getAttribute("FirstName")%>  <input  type="submit" value="Logout" id="submit" onClick="Logout()"/></div>
 	</div>    
         <center>
