@@ -24,9 +24,11 @@
                      logfound="false";
                  }
                  
-			}	catch(Exception e)
+			}	
+			catch(Exception e)
 			{
 					session.setAttribute("log-found","false");
+					logfound="false";
 			}
 			if(logfound.equals("false"))
 			{%>
@@ -42,7 +44,6 @@
             String to_user = request.getParameter("to");
             String subject = request.getParameter("sub");
             String message = request.getParameter("msg");
-			//Hello
 			if(username!=null)
 			if(to_user.equals("username"))
 			{
@@ -51,6 +52,8 @@
 					window.location="compose.jsp";
 				<%
 			}
+			else
+			{
             try{
                 
             Connection conn = DriverManager.getConnection("jdbc:mysql://127.5.254.130:3306/main","adminneUhFbw","friendship96");
@@ -70,6 +73,7 @@
 				window.location="compose.jsp";
 				<%
             }
+			}
 			if(!flag)
 			{
             
