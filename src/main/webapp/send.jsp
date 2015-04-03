@@ -44,7 +44,7 @@
             String subject = request.getParameter("sub");
             String message = request.getParameter("msg");
 			if(username!=null)
-			if(to_user.equals("username"))
+			if(to_user.equals("from_user"))
 			{
 				%>
 					window.alert("You are sending to yourself. Message not sent.");
@@ -60,7 +60,7 @@
             String retrieve,notesify;
 			java.util.Date now = new java.util.Date();
             retrieve = "insert into MessageDetails values(\'"+from_user +"\',\'"+to_user +"\',\'"+subject +"\',\'"+message +"\',\'"+now.toString() +"\',\'NA\',\'WAIT\')";
-            stmt.executeUpdate(retrieve);
+            int i = stmt.executeUpdate(retrieve);
              stmt.close();
              conn.close();
             }
