@@ -71,7 +71,6 @@
 				window.location="compose.jsp";
 				<%
             }
-			}
 			if(!flag)
 			{
 			%>
@@ -80,6 +79,7 @@
 			<%
 			}
 			%>
+			}
             </script>
             </head>
             <body>
