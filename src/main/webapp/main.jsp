@@ -90,7 +90,7 @@ and open the template in the editor.
 		else
 		{
 			%>
-			<div id="toptext" style="float:left;display:inline-block;"> <button id="submit" onClick="displaymsg()">Inbox <div id="inbox"  style="float:right;display:inline-block;" ><%=i%></div></button></div>
+			<div id="toptext" style="float:left;display:inline-block;"> <button id="submit" onClick="displaymsg()">Inbox &nbsp;<div id="inbox"  style="float:right;display:inline-block;" ><%=i%></div></button></div>
 			<%
 		}
 	%>
