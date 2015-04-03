@@ -120,6 +120,18 @@ padding: 2px;
 text-align: left;
 background: #ffffff;
 }
+#boxnote {
+width: 600px;
+height: 350px;
+overflow-y:scroll; 
+font-size: 18pt;
+color:#000000;
+margin: 0 auto;
+border: 2px solid #ff0000;
+padding: 2px;
+text-align: left;
+background: #ffffff;
+}
 #inbox
 {
 	width:20px;
