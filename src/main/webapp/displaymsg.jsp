@@ -74,7 +74,7 @@
 					String from = rs.getString("From_User");
 					String subject = rs.getString("Subject");
 					String message = rs.getString("Message");
-					finaltext = "<font color=red>From:</font>"+ from + "<hr><font color=red>Subject:</font>" + subject + "<hr><font color=red>Message:</font><br>" +message+"<br>";%>
+					finaltext = "<font color=red>From:</font> "+ from + "<hr><font color=red>Subject:</font> " + subject + "<hr><font color=red>Message:</font><br>" +message+"<br>";%>
 					 <div id="msgnote"><%=finaltext%></div><br>
 				<% 
 				}
