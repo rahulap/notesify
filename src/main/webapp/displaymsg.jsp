@@ -73,7 +73,7 @@
 					String subject = rs.getString("Subject");
 					String message = rs.getString("Message");
 					finaltext = "<font color=red>From:</font>"+ from + "<hr><font color=red>Subject:</font>" + subject + "<hr><font color=red>Message:</font><br>" +message+"<br>";%>
-					 <div id="boxnote"><%=finaltext%><br></div>
+					 <div id="msgnote"><%=finaltext%></div><br>
 				<% 
 				}
 				java.util.Date now = new java.util.Date();
