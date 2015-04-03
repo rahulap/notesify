@@ -122,8 +122,16 @@ background: #ffffff;
 }
 #inbox
 {
-	width:5px;
-	height:5px;
+	width:20px;
+	height:20px;
+	color:white;
+	background:#ff0000;
+	font-size: 20px;
+}
+#inbox:hover
+{
+	width:20px;
+	height:20px;
 	color:white;
 	background:#ff0000;
 	font-size: 20px;
