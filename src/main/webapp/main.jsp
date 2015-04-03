@@ -5,6 +5,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <%@page import="java.util.*" session="true"%>
+<%@page import="java.sql.*"%>
 <html>
     <head>
         <title>Notesify</title>
@@ -35,7 +36,25 @@ and open the template in the editor.
 			if(logfound.equals("false"))
 			{%>
 				window.location="index.jsp";
-			<%}%>        
+			<%}
+					int i=0;
+					try
+					{
+							 Connection conn = DriverManager.getConnection("jdbc:mysql://127.5.254.130:3306/main","adminneUhFbw","friendship96");
+							Statement stmt = conn.createStatement();
+							String retrieve;
+							retrieve = "Select * from MessageDetails where To_User=\'" +(String)session.getAttribute("username")+"\' and Status=\'WAIT\'";
+							ResultSet rs = stmt.executeQuery(retrieve);
+							while(rs.next())
+							{
+								i++;
+							}
+					}
+					catch(Exception e)
+					{
+						
+					}
+			%>        
             function getNotes()
             {
                 location.href="getNotes.jsp";
@@ -50,8 +69,11 @@ and open the template in the editor.
             }
         </script>
     </head>
-    <body background="images/bgtxt_blue.jpg">
-	<div id="toptext" align="right">Welcome, <%=session.getAttribute("FirstName")%>  <input  type="submit" value="Logout" id="submit" onClick="Logout()"/></div>
+    <body background="images/bgtxt_blue.jpg"><>
+	<div>
+	<div id="toptext" style="float:left;"> <button id="submit">Inbox <%=i%></button></div>
+     <div id="toptext"style="float:right; display:inline-block;">Welcome, <%=session.getAttribute("FirstName")%>  <input  type="submit" value="Logout" id="submit" onClick="Logout()"/></div>
+	</div>    
         <center>
         <br>
         <br>

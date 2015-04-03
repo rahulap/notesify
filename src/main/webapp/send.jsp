@@ -67,7 +67,7 @@
             {
 				flag = true;
                 %>
-				window.alert("Sorry. Username doesn't exist.");
+				window.alert("Sorry. Username doesn't exist. Please check the Username and Try again.");
 				window.location="compose.jsp";
 				<%
             }
