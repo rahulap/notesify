@@ -122,6 +122,8 @@ background: #ffffff;
 }
 #inbox
 {
+	width:5px;
+	height:5px;
 	color:white;
 	background:#ff0000;
 	font-size: 20px;
