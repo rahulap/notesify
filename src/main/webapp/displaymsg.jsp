@@ -10,7 +10,7 @@
 <%@page import="java.io.BufferedReader"%>
 <%@page import="java.net.URLConnection"%>
 <%@page import="java.net.URL"%>
-<%@page import="java.util.Calendar"%>
+<%@page import="java.util.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -26,7 +26,7 @@
 		}
 		function back()
 		{
-			window.location="getNotes.jsp";
+			window.location="main.jsp";
 		}
 		<% String logfound=null;
 			try
@@ -72,7 +72,7 @@
 					String from = rs.getString("From_User");
 					String subject = rs.getString("Subject");
 					String message = rs.getString("Message");
-					finaltext = "From:"+ from + "\n <hr> \n Subject:" + subject + "\n<hr>\n Message:\n" +message+"\n";%>
+					finaltext = "<font color=red>From:</font>"+ from + "<br> <hr> <br> <font color=red>Subject:</font>" + subject + "<br><hr><br> <font color=red>Message:</font><br>" +message+"\n";%>
 					 <div id="boxnote"><%=finaltext%></div>
 				<% 
 				}
@@ -81,6 +81,8 @@
 				{
 						
 				}
+				java.util.Date now = new java.util.Date();
+				int i = stmt.executeUpdate("Update MessageDetails SET Received_Time=\'"+ now.toString() +"\',Status=\'READ\' where To_User=\'" +(String)session.getAttribute("username")+"\' and Status=\'WAIT\'");
 			%>
      </body>
 </html>
