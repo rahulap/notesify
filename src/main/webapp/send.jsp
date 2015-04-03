@@ -43,7 +43,7 @@
             String to_user = request.getParameter("to");
             String subject = request.getParameter("sub");
             String message = request.getParameter("msg");
-			if(to_user.equals("from_user"))
+			if(to_user.equals(from_user))
 			{
 				%>
 					window.alert("You are sending to yourself. Message not sent.");
@@ -58,7 +58,7 @@
             Statement stmt = conn.createStatement();
             String retrieve,notesify;
 			java.util.Date now = new java.util.Date();
-            retrieve = "insert into MessageDetails values(\'"+from_user +"\',\'"+to_user +"\',\'"+subject +"\',\'"+message +"\',\'"+now.toString() +"\',\'NA\',\'WAIT\')";
+            retrieve = "insert into MessageDetails values(\'"+ from_user +"\',\'"+ to_user +"\',\'"+ subject +"\',\'"+ message +"\',\'"+ now.toString() +"\',\'NA\',\'WAIT\')";
             int i = stmt.executeUpdate(retrieve);
              stmt.close();
              conn.close();
