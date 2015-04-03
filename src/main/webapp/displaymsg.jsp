@@ -72,8 +72,8 @@
 					String from = rs.getString("From_User");
 					String subject = rs.getString("Subject");
 					String message = rs.getString("Message");
-					finaltext = "<font color=red>From:</font>"+ from + "<br> <hr> <br> <font color=red>Subject:</font>" + subject + "<br><hr><br> <font color=red>Message:</font><br>" +message+"\n";%>
-					 <div id="boxnote"><%=finaltext%></div>
+					finaltext = "<font color=red>From:</font>"+ from + "<br> <hr> <br> <font color=red>Subject:</font>" + subject + "<br><hr><br> <font color=red>Message:</font><br>" +message+"<br>";%>
+					 <div id="boxnote"><%=finaltext%><br></div>
 				<% 
 				}
 				}
