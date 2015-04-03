@@ -84,11 +84,17 @@ and open the template in the editor.
 		if(i==0)
 		{
 	%>
-	<div id="toptext" style="float:left;display:inline-block"> <button diabled="true" id="submit"  onClick="displaymsg()">Inbox</button></div>
+	<div id="toptext" style="float:left;display:inline-block"> <button  id="submit"  onClick="displaymsg()" disabled>Inbox</button></div>
 	<%	
 		}
+		else
+		{
+			%>
+			<div id="toptext" style="float:left;display:inline-block;"> <button id="submit" onClick="displaymsg()">Inbox: <div id="inbox"  style="float:right;display:inline-block;" ><%=i%></div></button></div>
+			<%
+		}
 	%>
-	<div id="toptext" style="float:left;display:inline-block;"> <button id="submit" onClick="displaymsg()" style="float:right;display:inline-block;">Inbox <div id="inbox" ><%=i%></div></button></div>
+
      <div id="toptext"style="float:right; display:inline-block;">Welcome, <%=session.getAttribute("FirstName")%>  <input  type="submit" value="Logout" id="submit" onClick="Logout()"/></div>
 	</div>    
         <center>
