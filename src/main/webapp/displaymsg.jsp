@@ -76,13 +76,14 @@
 					 <div id="boxnote"><%=finaltext%><br></div>
 				<% 
 				}
+				java.util.Date now = new java.util.Date();
+				int i = stmt.executeUpdate("Update MessageDetails SET Received_Time=\'"+ now.toString() +"\',Status=\'READ\' where To_User=\'" +(String)session.getAttribute("username")+"\' and Status=\'WAIT\'");
+		
 				}
 				catch(Exception e)
 				{
 						
 				}
-				java.util.Date now = new java.util.Date();
-				int i = stmt.executeUpdate("Update MessageDetails SET Received_Time=\'"+ now.toString() +"\',Status=\'READ\' where To_User=\'" +(String)session.getAttribute("username")+"\' and Status=\'WAIT\'");
 			%>
      </body>
 </html>
