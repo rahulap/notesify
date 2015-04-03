@@ -69,7 +69,7 @@ and open the template in the editor.
             }
         </script>
     </head>
-    <body background="images/bgtxt_blue.jpg"><>
+    <body background="images/bgtxt_blue.jpg">
 	<div>
 	<div id="toptext" style="float:left;"> <button id="submit">Inbox <%=i%></button></div>
      <div id="toptext"style="float:right; display:inline-block;">Welcome, <%=session.getAttribute("FirstName")%>  <input  type="submit" value="Logout" id="submit" onClick="Logout()"/></div>
