@@ -43,7 +43,6 @@
             String to_user = request.getParameter("to");
             String subject = request.getParameter("sub");
             String message = request.getParameter("msg");
-			if(username!=null)
 			if(to_user.equals("from_user"))
 			{
 				%>
